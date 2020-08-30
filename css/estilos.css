@@ -1,0 +1,199 @@
+header{
+  /*APLICAMOS TRANSPARENCIA A LA IMAGEN DE FONDO*/
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(https://cdn.pixabay.com/photo/2016/01/19/17/29/earth-1149733_960_720.jpg);
+    height: 100vh;/*100 VH=ALTURA TOTAL DEL VIEWPORT*/
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+#videobg {
+    position: relative;
+
+    width: 100%;
+}
+/*BARRA DE NAVEGACIÓN SUPERIOR*/
+
+.navbar{
+    background-color: black;
+}
+
+.row{
+    margin-top: 40px;
+    margin-bottom: 15px;
+
+}
+
+/*APLICANDO DISEÑO A LAS COLUMNAS*/
+
+div[class^="col-md-12 col-lg-12"]{
+    text-align: center;
+    
+}
+
+div[class^="col-md-6 col-lg-6 col-xs-12"]{
+    text-align: center;
+     background-color: #FAFAFA;
+    
+}
+
+
+
+div[class^="col-md-6 col-lg-6 col-sm-6 col-sm-6 col-xs-12"]{
+    text-align: center;
+    background-color: #FAFAFA;
+    
+
+}
+
+
+/*DISEÑO DE LAS COLUMNAS ANIDADAS*/
+div[class^="col-md-4"]{
+    font-family: Monospace Sans-Serif;
+    color:black;
+    text-align: center;
+    background-color: #FAFAFA;
+}
+
+h4{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+hr{
+    color: black;
+    
+}
+
+/*ESTILOS GENERALES A TODAS LAS COLUMNAS*/
+div[class^="col-"]{
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+ 
+}
+
+/*TEXTO DEL BANNER; SE DEFINE CON POSICIÓN ABSOLUTA PARA SUPERPONER LA IMAGEN*/
+.banner-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.navbar-brand{
+    font-family: Roboto;
+}
+
+
+
+.nav-link{ 
+    font-family: Roboto;
+    text-transform: uppercase; 
+}
+
+.banner-text p{
+    font-family: cursive;
+    color: #fff;
+    font-size: 22px;
+}
+
+.banner-btn a{
+    border: 1px solid #fff;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 50px;
+    display: inline-block;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.banner-btn a.active{
+    background: #fed135;
+    border-color: #fed136;
+    color: #000;
+}
+
+
+
+.text-area{
+    font-size: 80px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;    
+}
+
+
+.text-area span{
+    color: #fff;
+    opacity: 0;
+    animation: animar 7s forwards; /*TIEMPO DE DURACIÓN DE LA ANIMACIÓN DEL TEXTO*/
+}
+
+.tex-area span{
+    display: inline-block;
+    
+}
+
+/*-----------------------------------CAROUSEL*/
+
+.carousel-item img
+{
+    height: 100%;
+    width: 100%;
+}
+
+/*TAMAÑO DE ICONOS DE DIRECCION*/
+.carousel-control-next-icon, .carousel-control-prev-icon
+{
+    height: 40px;
+    width: 40px;
+    
+}
+
+/*SECCION DE DESCRIPCION DE IMAGEN*/
+
+.caroulsel-caption{
+    background-color: #544F4F;
+    color: white;
+    width: 100%;
+    padding: 50px;
+    left: 0;
+}
+
+
+
+/*ICONOS DE DESPLZAMIENTO HORIZONTAL*/
+.carousel-indicators{
+    margin-bottom: 20px;
+}
+
+
+/*REALIZANDO ANIMACIÓN INVOCANDO AL IDENTIFICADOR ANIMAR*/
+@keyframes animar{
+    
+    100%{
+        /*APLICAMOS OPACIDAD AL TEXTO*/
+        opacity: 1;
+    }
+    
+}
+
+/*NO SE APLICAN LOS MEDIA PARA DEMÁS DIMENSIONES, YA QUE SE ESTABLECEN EN EL ESPACIO OCUPADO POR LAS CAJAS*/
+
+@media (max-width:500px){
+    .banner-text p{
+        font-size: 15px;
+    }
+    .navbar-dark{
+        background-color: #333;
+    }
+    .text-area{
+        font-size: 50px;
+    }
+    
+}
+
